@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  margin: auto;
+  padding: 4*$gap 2*$gap;
+  max-width: 1200px;
+
+  &.container-center { align-items: center; }
+  &.container-full { min-height: 100vh; }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$gap * 0.5);
+  width: 100%;
+
+  &.row-center { justify-content: center; }
+  &.row-space-between { justify-content: space-between; }
+}
+
+.col {
+  flex: 100% 0 0;
+  margin: 0 0 $gap 0;
+  padding: 0 $gap * 0.5;
+
+  // .xs-1, .xs-2, .xs-3, stb.
+  @each $breakpoint-name in $breakpoint-names {
+    @media (min-width: map-get($breakpoints-min, $breakpoint-name)) {
+      @for $i from 1 through $col-max-count {
+        &.#{$breakpoint-name}-#{$i} {
+          flex: (100% * ($i / $col-max-count)) 0 0;
+        }
+      }
+    }
+  }
+}

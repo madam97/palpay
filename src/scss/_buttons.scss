@@ -1,0 +1,9 @@
+.btn-primary {
+  cursor: pointer;
+  padding: .5 * $gap $gap;
+  border: $border solid $primary;
+  border-radius: $radius;
+  background: $primary;
+  color: $white;
+  letter-spacing: $letter-spacing;
+}

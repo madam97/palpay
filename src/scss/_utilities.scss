@@ -1,7 +1,35 @@
+@use 'sass:string';
+
+$directions: 'top' 'right' 'bottom' 'left';
+
+// Width, height, margin, padding
+@for $i from 1 through 4 {
+  .w-#{$i * 25} { width: 25% * $i;  }
+}
+
+@each $dir in $directions {
+  .m#{str-slice($dir,1,1)}-auto { margin-#{$dir}: auto !important; }
+  .p#{str-slice($dir,1,1)}-auto { padding-#{$dir}: auto !important; }
+}
+
+@for $i from 0 through 5 {
+  @each $dir in $directions {
+    .m#{str-slice($dir,1,1)}-#{$i} { margin-#{$dir}: $i * $gap !important; }
+    .p#{str-slice($dir,1,1)}-#{$i} { padding-#{$dir}: $i * $gap !important; }
+  }
+
+  .mx-#{$i} { margin-left: $i * $gap !important; margin-right: $i * $gap !important; }
+  .my-#{$i} { margin-top: $i * $gap !important; margin-bottom: $i * $gap !important; }
+  .px-#{$i} { padding-left: $i * $gap !important; padding-right: $i * $gap !important; }
+  .py-#{$i} { padding-top: $i * $gap !important; padding-bottom: $i * $gap !important; }
+}
+
+// Flex
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+// Text
 .text-center { text-align: center; }

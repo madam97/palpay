@@ -1,17 +1,18 @@
 .container {
   display: flex;
+  flex-direction: column;
   margin: auto;
-  padding: 4*$gap 2*$gap;
+  padding: 4*$gap $gap;
   max-width: 1200px;
 
-  &.container-center { align-items: center; }
+  &.container-center { justify-content: center; align-items: center; }
   &.container-full { min-height: 100vh; }
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 (-$gap * 0.5);
+  margin: 0 -.5 * $gap;
   width: 100%;
 
   &.row-center { justify-content: center; }
@@ -21,7 +22,7 @@
 .col {
   flex: 100% 0 0;
   margin: 0 0 $gap 0;
-  padding: 0 $gap * 0.5;
+  padding: 0 .5 * $gap;
 
   // .xs-1, .xs-2, .xs-3, stb.
   @each $breakpoint-name in $breakpoint-names {

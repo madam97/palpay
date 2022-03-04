@@ -1,4 +1,5 @@
 import React from 'react';
+import {ReactComponent as Logo} from '../assets/logo.svg';
 
 type LoginProps = {
 
@@ -7,6 +8,10 @@ type LoginProps = {
 export default function Login({}: LoginProps) {
   return (
     <section className="container container-full container-center">
+      <div className="text-center">
+        <Logo className="mb-2" width="200" />
+      </div>
+
       <div className="row row-center">
         <form className="col xs-4">
           <div className="form-row">

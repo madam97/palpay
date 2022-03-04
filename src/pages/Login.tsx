@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {ReactComponent as Logo} from '../assets/logo.svg';
 
 type LoginProps = {
@@ -6,6 +6,10 @@ type LoginProps = {
 };
 
 export default function Login({}: LoginProps) {
+
+  const [username, setUsername] = useState<string>();
+  const [password, setPassword] = useState<string>();
+
   return (
     <section className="container container-full container-center">
       <div className="text-center">
@@ -16,13 +20,17 @@ export default function Login({}: LoginProps) {
         <form className="col xs-4">
           <div className="form-row">
             <div className="input-group">
-              <input id="username" className="input" name="username" type="text" />
+              <input id="username" className={`input ${username ? 'changed' : ''}`} name="username" type="text" 
+                value={username} onChange={event => setUsername(event.currentTarget.value)}
+              />
               <label htmlFor="username">Username</label>
             </div>
           </div>
           <div className="form-row">
             <div className="input-group">
-              <input id="password" className="input" name="password" type="password" />
+              <input id="password" className={`input ${password ? 'changed' : ''}`} name="password" type="password"
+                value={password} onChange={event => setPassword(event.currentTarget.value)}
+              />
               <label htmlFor="password">Password</label>
             </div>
           </div>

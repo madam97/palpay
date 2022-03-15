@@ -20,3 +20,19 @@ p {
   margin: 0 0 $gap 0;
   line-height: 1.5rem;
 }
+
+a {
+  cursor: pointer;
+  
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}

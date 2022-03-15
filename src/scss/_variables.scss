@@ -1,6 +1,8 @@
 // Colors
 $white:         #ffffff;
 $gray-b:        #b5b5b5;
+$gray-9:        #9f9f9f;
+$gray-4:        #444444;
 $gray-2:        #222222;
 $black:         #000000;
 
@@ -15,6 +17,8 @@ $gap:             20px;
 $radius:          5px;
 $border:          2px;
 $letter-spacing:  2px;
+$header-width:    200px;
+$header-height:   60px;
 
 // Responsive breakpoints
 $break-xs-max: 575px;
@@ -36,6 +40,15 @@ $breakpoints-min: (
 );
 
 $col-max-count:       12;
+
+// Icon
+$icon-sizes: (
+  xs: .8rem,
+  sm: 1rem,
+  md: 1.5rem,
+  lg: 2rem,
+  xl: 3rem
+);
 
 // Times
 $anim-time:       .3s;

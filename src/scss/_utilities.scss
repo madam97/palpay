@@ -24,6 +24,7 @@ $directions: 'top' 'right' 'bottom' 'left';
   .py-#{$i} { padding-top: $i * $gap !important; padding-bottom: $i * $gap !important; }
 }
 
+
 // Flex
 .flex-center {
   display: flex;
@@ -31,5 +32,21 @@ $directions: 'top' 'right' 'bottom' 'left';
   align-items: center;
 }
 
+
 // Text
 .text-center { text-align: center; }
+
+
+// Icons
+.icon {
+  width: 1rem;
+  height: auto;
+
+  &.icon-mr {
+    margin-right : .5em;
+  }
+
+  @each $breakpoint-name in $breakpoint-names {
+    &.icon-#{$breakpoint-name} { width: map-get($icon-sizes, $breakpoint-name); }
+  }
+}

@@ -1,0 +1,40 @@
+.navbar-toggler {
+  padding: .5 * $gap;
+  border: 0;
+  background: transparent;
+  color: $white;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: .25 * $gap;
+
+    &.nav-divider {
+      padding: .5 * $gap;
+      color: $gray-9;
+      font-size: .8em;
+      letter-spacing: $letter-spacing * 2;
+      text-transform: uppercase;
+
+      &:not(:first-child) {
+        border-top: 1px solid $gray-4;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: .25 * $gap;
+    border-radius: $radius;
+
+    &:hover,
+    &:active {
+      background: $primary;
+    }
+  }
+}

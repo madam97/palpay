@@ -1,0 +1,35 @@
+@import "../variables";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: .5 * $gap;
+    height: 100%;
+  }
+
+  .nav {
+    position: fixed;
+    top: $header-height;
+    right: 0;
+    bottom: 0;
+    width: $header-width;
+    background: $gray-2;
+    transform: translateX($header-width);
+
+    &.opened {
+      transform: translateX(0);
+    }
+
+    &.opened,
+    &.closed {
+      transition: transform $anim-time;
+    }
+  }
+}

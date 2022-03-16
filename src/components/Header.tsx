@@ -4,6 +4,7 @@ import { AiOutlineMenu, AiOutlineClose, AiFillBank } from 'react-icons/ai';
 import { MdAttachMoney } from 'react-icons/md';
 import { FaRegAddressCard } from 'react-icons/fa';
 import { BsArrowLeftRight } from 'react-icons/bs';
+import { RiLogoutBoxLine } from 'react-icons/ri';
 import {ReactComponent as Logo} from '../assets/logo.svg';
 import '../scss/components/header.scss';
 
@@ -54,6 +55,12 @@ export default function Header() {
             <Link to="/profile/contacts">
               <FaRegAddressCard className="icon icon-mr" /> Contacts
             </Link>
+          </li>
+
+          <li>
+            <button type="button">
+              <RiLogoutBoxLine className="icon icon-mr" /> Logout
+            </button>
           </li>
 
         </ul>

@@ -1,6 +1,7 @@
 .navbar-toggler {
   padding: .5 * $gap;
   border: 0;
+  border-radius: $radius;
   background: transparent;
   color: $white;
 }
@@ -26,11 +27,21 @@
     }
   }
 
-  a {
+  button {
+    border: 0;
+    background: transparent;
+    color: $white;
+    font-size: 1rem;
+  }
+
+  a,
+  button {
     display: flex;
     align-items: center;
     padding: .25 * $gap;
+    width: 100%;
     border-radius: $radius;
+    font-size: 1rem;
 
     &:hover,
     &:active {

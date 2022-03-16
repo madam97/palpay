@@ -19,9 +19,7 @@ header {
     top: $header-height;
     right: 0;
     bottom: 0;
-    width: $header-width;
     background: $gray-2;
-    transform: translateX($header-width);
 
     &.opened {
       transform: translateX(0);
@@ -31,5 +29,19 @@ header {
     &.closed {
       transition: transform $anim-time;
     }
+  }
+}
+
+@media (max-width: $break-sm-max) {
+  header .nav {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: $break-sm-min) {
+  header .nav {
+    width: $header-width;
+    transform: translateX($header-width);
   }
 }
